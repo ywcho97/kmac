@@ -15,11 +15,67 @@
 </head>
 
 <body>
+    <div class="modal" id="siteMap">
+        <div class="bg" onclick="closePopup('siteMap')"></div>
+        <div class="modal_cont">
+            <div class="modalTop">
+                <p>사이트맵</p>
+                <button type="button" class="close" onclick="closePopup('siteMap')"><i class="mdi mdi-close"></i></button>
+            </div>
+            <div class="modalCont">
+                <p>서비스</p>
+                <ul>
+                    <li>
+                        <a href="sub01.html">Safe- On</a>
+                    </li>
+                    <li>
+                        <a href="sub02.html">Green-Matrix</a>
+                    </li>
+                    <li>
+                        <a href="sub03.html">K-DQMS</a>
+                    </li>
+                    <li>
+                        <a href="sub04.html">AI Studio</a>
+                    </li>
+                </ul>
+                <p>인사이트</p>
+                <ul>
+                    <li>
+                        <a href="sub05.html">KMAC News</a>
+                    </li>
+                    <li>
+                        <a href="sub06.html">KMAC BIZ & Insight</a>
+                    </li>
+                    <li>
+                        <a href="sub07.html">KMAC TV</a>
+                    </li>
+                    <li>
+                        <a href="sub08.html">Conference</a>
+                    </li>
+                </ul>
+                <p>고객지원</p>
+                <ul>
+                    <li>
+                        <a href="help.html#tabCont1">1:1 문의하기</a>
+                    </li>
+                    <li>
+                        <a href="help.html#tabCont2">데모 시연 신청</a>
+                    </li>
+                </ul>
+                <p>회사소개</p>
+                <ul>
+                    <li>
+                        <a href="https://kmac.co.kr/portal/index#main">회사소개</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <div class="wrap">
         <!-- <div id="include-headerSub"></div> -->
         <div class="gnb sub">
             <div class="top_logo logo">
-                <a href="./index.html">
+                <a href="./main.html">
                     <img src="./img/mainLogo.png" alt="img">
                 </a>
             </div>
@@ -75,7 +131,7 @@
                         <a style="cursor:pointer;">회사소개</a>
                         <ul class="twoD" style="display: none;">
                             <li>
-                                <a href="#none">회사소개</a>
+                                <a href="https://kmac.co.kr/portal/index#main">회사소개</a>
                             </li>
                         </ul>
                     </li>
@@ -178,9 +234,8 @@
                     </div>
                     <div class="sectionCont function">
                         <div class="about blue">
-                            <img src="./img/number01.png" alt="img">
                             <dl>
-                                <dt>컨설팅</dt>
+                                <dt><img src="./img/number01.png" alt="img">컨설팅</dt>
                                 <dd>· 기업 및 기관의 현행 분석· 산업의 특성과 운영 환경에 맞춘 맞춤형 리스크 관리 체계 설계</dd>
                                 <dd>
                                     · 안전·보건 컨설팅은 단순한 규제 대응을 넘어, 기업 및 기관의 인력 운영 효율화,
@@ -189,77 +244,68 @@
                             </dl>
                         </div>
                         <h3>주요 기능</h3>
-                        <div class="justify">
-                            <div class="about">
-                                <img src="./img/number02.png" alt="img">
-                                <dl>
-                                    <dt>경영자 리더십</dt>
-                                    <dd>· 안전보건목표 및 경영방침</dd>
-                                    <dd>· 안전 및 보건에 관한 전담조직</dd>
-                                    <dd>· 안전 및 보건에 관한 예산편성 및 집행지침</dd>
-                                </dl>
+                        <div class="function_wrap">
+                            <div class="functionLeft">
+                                <div class="about">
+                                    <dl>
+                                        <dt><img src="./img/number02.png" alt="img">경영자 리더십</dt>
+                                        <dd>· 안전보건목표 및 경영방침</dd>
+                                        <dd>· 안전 및 보건에 관한 전담조직</dd>
+                                        <dd>· 안전 및 보건에 관한 예산편성 및 집행지침</dd>
+                                    </dl>
+                                </div>
+                                <div class="about">
+                                    <dl>
+                                        <dt><img src="./img/number03.png" alt="img">근로자의 참여</dt>
+                                        <dd>· 안전보건관리 전반에 관한 정보를 공개</dd>
+                                        <dd>· 구성원이 참여할 수 있는 절차</dd>
+                                    </dl>
+                                </div>
+                                <div class="about">
+                                    <dl>
+                                        <dt><img src="./img/number04.png" alt="img">위험요인 파악</dt>
+                                        <dd>· 산업재해, 아차사고 조사</dd>
+                                        <dd>· 위험기계·기구·설비 등을 파악</dd>
+                                        <dd>· 유해인자 파악</dd>
+                                        <dd>· 위험장소 및 작업형태별 위험요인을 파악</dd>
+                                    </dl>
+                                </div>
+                                <div class="about">
+                                    <dl>
+                                        <dt><img src="./img/number05.png" alt="img">위험요인 제거·대체 및 통제</dt>
+                                        <dd>· 안전작업허가제 운영</dd>
+                                        <dd>· 위험요인을 제거하기 위한 검토·개선을 실시</dd>
+                                        <dd>· 안전보건교육 실시 및 비일상작업 안전절차를 마련</dd>
+                                        <dd>· 위험요인 개선사항 점검·조치</dd>
+                                    </dl>
+                                </div>
                             </div>
-                            <div class="about">
-                                <img src="./img/number06.png" alt="img">
-                                <dl>
-                                    <dt>비상조치계획 수립</dt>
-                                    <dd>· 위험요인을 바탕으로 ‘시나리오’ 작성</dd>
-                                    <dd>· ‘재해 발생 시나리오’ 별 조치계획 수립</dd>
-                                    <dd>· 조치계획에 따라 주기적으로 훈련</dd>
-                                </dl>
-                            </div>
-                        </div>
-                        <div class="justify">
-                            <div class="about">
-                                <img src="./img/number03.png" alt="img">
-                                <dl>
-                                    <dt>근로자의 참여</dt>
-                                    <dd>· 안전보건관리 전반에 관한 정보를 공개</dd>
-                                    <dd>· 구성원이 참여할 수 있는 절차</dd>
-                                </dl>
-                            </div>
-                            <div class="about">
-                                <img src="./img/number07.png" alt="img">
-                                <dl>
-                                    <dt>도급·용역·위탁 시 안전보건 확보</dt>
-                                    <dd>· 산업재해 예방 능력을 갖춘 사업주를 선정</dd>
-                                    <dd>· 안전보건관리체계 구축·운영 시 사업장 내 모든 구성원보호</dd>
-                                </dl>
-                            </div>
-                        </div>
-                        <div class="justify">
-                            <div class="about">
-                                <img src="./img/number04.png" alt="img">
-                                <dl>
-                                    <dt>위험요인 파악</dt>
-                                    <dd>· 산업재해, 아차사고 조사</dd>
-                                    <dd>· 위험기계·기구·설비 등을 파악</dd>
-                                    <dd>· 유해인자 파악</dd>
-                                    <dd>· 위험장소 및 작업형태별 위험요인을 파악</dd>
-                                </dl>
-                            </div>
-                            <div class="about">
-                                <img src="./img/number08.png" alt="img">
-                                <dl>
-                                    <dt>평가 및 개선</dt>
-                                    <dd>· 안전보건 목표를 설정하고 관리</dd>
-                                    <dd>· 발굴된 문제점을 주기적으로 검토</dd>
-                                </dl>
-                            </div>
-                        </div>
-                        <div class="justify">
-                            <div class="about">
-                                <img src="./img/number05.png" alt="img">
-                                <dl>
-                                    <dt>위험요인 제거·대체 및 통제</dt>
-                                    <dd>· 안전작업허가제 운영</dd>
-                                    <dd>· 위험요인을 제거하기 위한 검토·개선을 실시</dd>
-                                    <dd>· 안전보건교육 실시 및 비일상작업 안전절차를 마련</dd>
-                                    <dd>· 위험요인 개선사항 점검·조치</dd>
-                                </dl>
-                            </div>
-                            <div class="aboutImg">
-                                <img src="./img/aboutImg.png" alt="img">
+                            <div class="functionRight">
+                                <div class="about">
+                                    <dl>
+                                        <dt><img src="./img/number06.png" alt="img">비상조치계획 수립</dt>
+                                        <dd>· 위험요인을 바탕으로 ‘시나리오’ 작성</dd>
+                                        <dd>· ‘재해 발생 시나리오’ 별 조치계획 수립</dd>
+                                        <dd>· 조치계획에 따라 주기적으로 훈련</dd>
+                                    </dl>
+                                </div>
+                                <div class="about">
+                                    <dl>
+                                        <dt><img src="./img/number07.png" alt="img">도급·용역·위탁 시 안전보건 확보</dt>
+                                        <dd>· 산업재해 예방 능력을 갖춘 사업주를 선정</dd>
+                                        <dd>· 안전보건관리체계 구축·운영 시 사업장 내 모든 구성원보호</dd>
+                                    </dl>
+                                </div>
+                                <div class="about">
+                                    <dl>
+                                        <dt><img src="./img/number08.png" alt="img">평가 및 개선</dt>
+                                        <dd>· 안전보건 목표를 설정하고 관리</dd>
+                                        <dd>· 발굴된 문제점을 주기적으로 검토</dd>
+                                    </dl>
+                                </div>
+                                <div class="aboutImg">
+                                    <img src="./img/aboutImg.png" alt="img">
+                                </div>
                             </div>
                         </div>
                     </div>
