@@ -150,8 +150,8 @@ button.line{background-color: transparent; color: var(--deepblue); border: 1px s
 .degitalCont .horizontal-section .horizontal-track .offeringBox {width: 38.8125rem; height: 700px; border-radius: 1.4375rem; margin-right: 1.5rem; position: relative;}
 .degitalCont .horizontal-section .horizontal-track .offeringBox:nth-child(1) .bg {background: url(../img/slide1.jpg) center center no-repeat}
 .degitalCont .horizontal-section .horizontal-track .offeringBox:nth-child(2) .bg {background: url(../img/slide2.jpg) center center no-repeat}
-.degitalCont .horizontal-section .horizontal-track .offeringBox:nth-child(3) .bg {background: url(../img/slide3.jpg) center center no-repeat}
-.degitalCont .horizontal-section .horizontal-track .offeringBox:nth-child(4) .bg {background: url(../img/slide4.jpg) center center no-repeat}
+.degitalCont .horizontal-section .horizontal-track .offeringBox:nth-child(3) .bg {background: url(../img/offering03.jpg) center center no-repeat}
+.degitalCont .horizontal-section .horizontal-track .offeringBox:nth-child(4) .bg {background: url(../img/offering04.jpg) center center no-repeat}
 .degitalCont .horizontal-section .horizontal-track .offeringBox .boxHashtag {display: inline-block; min-width: 13.125rem; background-color: var(--lightgray); padding: 1.125rem; margin-bottom: .625rem; border-radius: 3.125rem; text-align: center}
 .degitalCont .horizontal-section .horizontal-track .offeringBox .boxHashtag p {color: var(--black); font-weight: 700;}
 .degitalCont .horizontal-section .horizontal-track .offeringBox .bg {background-size: cover !important; position: absolute; width: 100%; height: calc(100% - 70px); overflow: hidden; border-radius: 1.4375rem;}
