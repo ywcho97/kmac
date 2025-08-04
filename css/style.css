@@ -317,7 +317,7 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
 .find_wrap input{width: calc(100% - 200px); padding: 10px 20px; font-size: 1rem; font-weight: 600; border: 1px solid var(--gray); border-radius: 30px; margin: 10px 0 0 0;}
 .find_wrap input:last-child{margin-bottom: 0;}
 
-.find_wrap .btn_wrap {display: block; margin-top: 0; position: absolute; right: 0; bottom: 0;}
+.find_wrap .btn_wrap {display: block; margin-top: 0; position: absolute; right: 0; bottom: 0; width: auto;}
 .find_wrap .btn_wrap button{width: 150px; height: 40px; float: right; font-size: 18px;}
 .find_wrap .findInfo{text-align: center;}
 .find_wrap .findInfo h3{font-size: 18px; font-weight: 700; margin-bottom: 5px;}
