@@ -297,6 +297,18 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
 .help_wrap ul li:nth-child(2){margin: 0 10px;}
 .help_wrap ul li a{font-size: 18px; font-weight: 500;}
 
+.solutionWrap {display: flex; gap: 10px; justify-content: space-between; flex-wrap: wrap;}
+.solutionBtn {background-color: #d9d9d9; color: #fff; height: 300px; text-align: center; flex: 1 1 calc(25% - 7.5px); box-sizing: border-box; font-size: 3rem; font-weight: 700;}
+.solutionBtn img{filter: brightness(0) invert(1);}
+.solutionBtn:hover{background-color: var(--deepblue);}
+
+/* 버튼이 4개 미만일 때 자동 대응 */
+.solutionWrap:has(> .solutionBtn:nth-child(4):last-child) .solutionBtn {flex: 1 1 calc(25% - 7.5px);}
+.solutionWrap:has(> .solutionBtn:nth-child(3):last-child) .solutionBtn {flex: 1 1 calc(33.333% - 6.666px);}
+.solutionWrap:has(> .solutionBtn:nth-child(2):last-child) .solutionBtn {flex: 1 1 calc(50% - 5px);}
+.solutionWrap:has(> .solutionBtn:nth-child(1):last-child) .solutionBtn {flex: 1 1 100%;}
+
+
 .tabBtn{display: flex; justify-content: space-between; width: 100%; gap: 30px; max-width: 760px; margin: 0 auto;}
 .tabBtn button{width: 100%; background-color: #DCDDDEEE; color: #fff; padding: 10px; border-radius: 30px; font-size: 18px; font-weight: 700;}
 .tabBtn button.active { background-color: var(--deepblue);}
@@ -610,8 +622,13 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
 
     .sub_wrap .inputText_wrap .inputText .inputArea label.file_btn{width: auto;}
 
+    /* 로그인 */
     .help_wrap{margin-top: 50px;}
     .login_wrap .loginInput{height: 60px; line-height: 60px;}
+    .solutionWrap > .solutionBtn {flex-basis: calc(50% - 5px) !important;}
+    .solutionWrap > .solutionBtn:nth-child(1):nth-last-child(1) {flex-basis: 100%;}
+    .solutionWrap > .solutionBtn:nth-child(2):nth-last-child(1) {flex-basis: 100%;}
+
 
     /* 상세페이지 */
     .detailPage *{letter-spacing: -1px;}
@@ -635,8 +652,8 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
     .sectionTit h3{font-size: 2rem;}
     .sectionTit p{font-size: 1.5rem; word-break: keep-all;}
     .sectionCont .about{padding: 15px 20px;}
-    .sectionCont .about h3{font-size: 1.75rem;}
-    .sectionCont .about p{font-size: 1.25rem; line-height: 1.75rem; margin: 5px 0 0 0;}
+    .sectionCont .about h3{font-size: 1.5rem;}
+    .sectionCont .about p{font-size: 1.25rem; line-height: 1.75rem; margin: 5px 0 0 0; word-break: keep-all;}
 
     
     .sectionCont.function .function_wrap{flex-direction: column;}
@@ -652,12 +669,16 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
 
 
     .group_wrap.double .group{width: 100%; margin-bottom: 20px;}
+    .sectionCont .about.key{padding: 15px 10px;}
     .sectionCont .about.key dl{flex-direction: column; gap: 10px;}
     .sectionCont .about.key dl dt{border-right: 0; width: 100%;}
     .sectionCont .about.key dl dd{font-size: 1.5rem;}
     .group_wrap.solution .group .box{flex-direction: column; height: auto;}
     .group_wrap.solution .group .box img{width: 100%;}
-    .sectionCont .about .circle{left: 0; width: 100px; height: 100px;}
+    .group_wrap .group .box{padding: 15px 10px;}
+    .group_wrap.double .group h3{font-size: 1.5rem;}
+    .group_wrap .group .box dl dd{word-break: keep-all; font-size: 1.25rem;}
+    .sectionCont .about .circle{left: 5px; width: 100px; height: 100px;}
 
     .blueBox{padding: 20px 10px;}
 
@@ -694,7 +715,7 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
 
 
     .find_wrap input{width: 100%; padding: 10px 5px;}
-    .result_wrap>p{font-size: 2.5rem; line-height: 3rem; word-break: keep-all;}
+    .result_wrap>p{font-size: 2rem; line-height: 2.5rem; word-break: keep-all;}
     /* 모달 */
     .modal .modal_cont{min-width: auto; width: calc(100% - 40px);}
     /* 사이트맵 */
