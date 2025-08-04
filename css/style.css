@@ -708,4 +708,5 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
     /* footer */
     .footer .footerCont{padding: 50px 20px;}
     .footer .footerCont .footerTop{flex-direction: column;}
+    .footer .footerCont .footerBottom ul li a{font-size: 1.125rem;}
 }
