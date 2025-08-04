@@ -77,7 +77,7 @@ button.next{background-color: var(--deepblue); color: #fff; font-size: 1.625rem;
 button.main{background-color: var(--deepblue); color: #fff; font-size: 1.625rem; }
 button.orange{background-color: var(--orange); color: #fff; font-size: 1.625rem; }
 button.end{background-color: #D9D9D9; color: #fff; font-size: 1.625rem; }
-button.line{background-color: transparent; color: var(--deepblue); border: 1px solid var(--deepblue);}
+button.line{background-color: transparent; color: var(--deepblue); border: 1px solid var(--deepblue); font-size: 1.625rem; }
 
 .displayb{display: block !important;}
 .displayn{display: none !important;}
