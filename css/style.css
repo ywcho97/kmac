@@ -134,7 +134,8 @@ button.line{background-color: transparent; color: var(--deepblue); border: 1px s
 .main_slide .slide_control .swiper-pagination-bullet {width: .75rem; height: .75rem; background-color: #fff; opacity: 1; border-radius: .75rem; display: block; margin-bottom: .625rem !important;}
 .main_slide .slide_control .swiper-pagination-bullet-active {background: none; border: .0625rem solid #fff;}
 
-.content { opacity: 0; transform: translateY(50px); /* 아래에서 올라오도록 */ transition: opacity 0.6s ease, transform 0.6s ease;}
+/* 컨텐츠 올라오게 */
+.content { opacity: 0; transform: translateY(50px); transition: opacity 0.6s ease, transform 0.6s ease;}
 .content.show { opacity: 1; transform: translateY(0);}
 
 /* 가로 스크롤 */
@@ -178,7 +179,7 @@ button.line{background-color: transparent; color: var(--deepblue); border: 1px s
 .inquiryCont .inquiryText h2 {font-size: 3.5rem; line-height: 4.375rem; font-weight: 700; text-align: center; color: #fff;}
 .inquiryCont .inquiryText h2 span {font-weight: 800; color: #fff;}
 .inquiryCont .inquiryBtn {margin-top: 133px; text-align: center}
-.inquiryCont .inquiryBtn button {width: 333px; height: 58px; background-color: #fff; border-radius: 2.5rem; font-size: .875rem; color: var(--black); margin: 0 .625rem;}
+.inquiryCont .inquiryBtn button {width: 333px; height: 58px; background-color: #fff; border-radius: 2.5rem; font-size: .875rem; color: var(--black); margin: 0 .625rem; font-weight: 700;}
 
 /* searchPage */
 .searchPage {background: url(../img/searchBg.png) no-repeat center center; background-size: cover; width: 100%; height: 100vh}
@@ -273,16 +274,16 @@ button.line{background-color: transparent; color: var(--deepblue); border: 1px s
 .mustInfo{text-align: right; font-size: 18px; font-weight: 700; color: var(--orange);}
 input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
 
+/* 파일 업로드 버튼 */
 .file-input {display: none;}
 .file_btn {padding: 12px 50px; border-radius: 20px; white-space: nowrap; font-size: 18px; font-weight: 700; cursor: pointer;}
 .inputGroup .inputText .form_input-file_wrap {display: flex;}
 .inputGroup .inputText .form_label-file {width: 100px; height: 30px; line-height:30px; border: 1px solid var(--lightgray); border-radius: 5px; color: var(--lightgray); font-weight: bold; display: flex; align-items: center; justify-content: center; cursor: pointer;}
 .inputGroup .inputText .form_span-file {/* border: 1px solid #e7e7e7; padding: 0 5px 0 10px; */ margin-left: 5px; display: block; width: auto; min-height: 30px;  border-radius: 3px; line-height: 30px; color: #999; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; box-sizing: border-box;}
 
+/* 날짜(달력) */
 #hiddenDateInput {visibility: hidden; position: absolute; z-index: -1; height: 0; padding: 0; margin: 0; border: none;}
-
 .custom-date-btn {display: inline-block; height: 30px; line-height: 30px; padding: 0px 20px; background-color: var(--deepblue); color: #fff; border: none; border-radius: 5px; font-size: 14px; cursor: pointer; }
-
 .flatpickr-calendar {margin-top: 30px !important;}
 /* 회원가입 03 */
 .welcome{text-align: center; font-size: 3.5rem; line-height: 4.375rem; font-weight: 700; word-break: keep-all;}
@@ -572,6 +573,8 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
     .main_slide .swiper-slide .slide_ment .slide_import span{font-size: 1rem; line-height: 1.5rem; display: block; text-align: center;}
     .main_slide .swiper-slide .slide_btn{bottom: 20px; left: 20px;}
     .main_slide .swiper-slide .slide_btn button{width: 100px;}
+
+    /* 메인 가로스크롤 */
     .degitalCont{padding: 50px 20px 0;}
 
     .degitalCont .horizontal-section{height: auto;}
@@ -609,10 +612,6 @@ input[type='file'] {display: block; width: 0; height: 0; overflow: hidden;}
 
     .help_wrap{margin-top: 50px;}
     .login_wrap .loginInput{height: 60px; line-height: 60px;}
-
-
-
-
 
     /* 상세페이지 */
     .detailPage *{letter-spacing: -1px;}
