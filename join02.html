@@ -12,6 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
     <link rel="stylesheet" href="./css/style.css">
+
 </head>
 
 <body>
@@ -68,6 +69,23 @@
                         <a href="https://kmac.co.kr/portal/index#main">회사소개</a>
                     </li>
                 </ul>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="cancelPopup">
+        <div class="bg" onclick="closePopup('cancelPopup')"></div>
+        <div class="modal_cont">
+            <div class="modalTop">
+                <p>알림</p>
+                <button type="button" class="close" onclick="closePopup('cancelPopup')"><i class="mdi mdi-close"></i></button>
+            </div>
+            <div class="modalCont">
+                <img src="./img/alarmCaution.png" alt="img">
+                <p>회원가입을 취소 하시겠습니까?</p>
+                <div class="btn_wrap">
+                    <button class="btn btn_main" onclick="closePopup('cancelPopup')">확인</button>
+                    <button class="btn btn_line" onclick="closePopup('cancelPopup')">취소</button>
+                </div>
             </div>
         </div>
     </div>
@@ -158,161 +176,131 @@
                 </button>
             </div>
         </div> <!-- //gnb -->
-        <div class="content_wrap detailPage" id="subPage">
-            <div class="detailTop">
-                <span class="location">Home / 서비스 / Safe-On</span>
-                <div class="detailTit">
-                    <img src="./img/safeOn.png" alt="img">
+        <div class="content_wrap" id="subPage">
+            <div class="sub_banner">
+                <div class="bannerTit">
+                    <h2>회원가입</h2>
+                    <p>KMAC Digital Solution</p>
                 </div>
-                <div class="justify">
-                    <p>
-                        Safe-On은 중대재해처벌법과 ISO45001 기준에 따라 설계되었으며<br/>
-                        기업 및 기관의 안전 보건 의무 확대와 환경영향 평가를 동시에 관리할 수 있는 솔루션입니다.
-                    </p>
-                    <div class="btn_wrap">
-                        <button type="button" class="main">데모신청</button>
-                        <button type="button" class="orange">브로슈어 다운로드</button>
-                    </div>
-                </div>
-                <div class="line"></div>
+                <img src="./img/joinBanner02.png" alt="img">
             </div>
-            <div class="detailCont">
-                <div class="section content">
-                    <div class="mainTit">
-                        <h2>중대재해처벌법의 핵심은</h2>
-                        <h3>
-                            기업이 스스로 경영책임자를 중심으로 안전,<br/>
-                            <strong>보건관리체계를 구축하고 이행하는 것</strong>
-                        </h3>
-                    </div>
-                    <div class="mainCont">
-                        <h4>이를 위배할 경우</h4>
-                        <div class="box_wrap">
-                            <div class="box">
-                                <img src="./img/boxIcon01.png" alt="img">
-                                <p>최대 50억 벌금</p>
-                            </div>
-                            <div class="box">
-                                <img src="./img/boxIcon02.png" alt="img">
-                                <p>최대 50억 벌금</p>
+            <div class="sub_wrap">
+                <div class="inputText_wrap">
+                    <div class="inputGroup">
+                        <div class="inputText">
+                            <div class="must"><p>아이디</p><span>입력해주세요!</span></div>
+                            <div class="inputArea">
+                                <input type="text" placeholder="회사 계정 이메일" required name="EM" id="EM"/>
+                                <button type="button" class="btn_main">메일 인증</button>
+                                <p class="caption">*회사 업무용 메일 계정으로 입력해주세요.</p>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="section content">
-                    <div class="sectionTit">
-                        <h2>ABOUT Safe-On</h2>
-                    </div>
-                    <div class="sectionCont">
-                        <div class="about">
-                            <h3>1. 완벽한 규제 준수와 환경 통합 관리</h3>
-                            <p>
-                                중대재해처벌법과 ISO45001의 기준에 따라 설계된 본 솔루션은<br/>
-                                기업 및 기관의 안전·보건 의무 확대와 환경영향 평가를 동시에 관리할 수 있는 All-In-One 솔루션
-                            </p>
-                        </div>
-                        <div class="about">
-                            <h3>2. 전문 컨설팅 기반 맞춤형 솔루션 제공</h3>
-                            <p>
-                                KMAC 컨설턴트의 전문적 분석을 통해, 특수한 산업 환경과 운영 프로세스에 맞춰<br/>
-                                효율적인 안전관리 체계를 구축할 수 있는 최적화된 맞춤형(Customizing) 솔루션 제공
-                            </p>
-                        </div>
-                        <div class="about">
-                            <h3>3. 운영 효율화 및 AI 활용 리포트 제공</h3>
-                            <p>
-                                본 솔루션은 중대재해처벌법 등 최신 법적 요구사항을 선제적으로 반영하여 법적 리스크를 최소화하며,<br/>
-                                운영 비용 절감과 비용 효율성을 제공합니다. 특히 생성형 AI 기술을 활용한 자동화 리포트 기능으로 정확하고<br/>
-                                신속한 안전보고서를 생성하여 관리 효율성 극대화
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="section content">
-                    <div class="sectionTit">
-                        <h2>KMAC Safe-ON의 8가지 핵심요소 및 기능</h2>
-                    </div>
-                    <div class="sectionCont function">
-                        <div class="about blue">
-                            <dl>
-                                <dt><img src="./img/number01.png" alt="img">컨설팅</dt>
-                                <dd>· 기업 및 기관의 현행 분석· 산업의 특성과 운영 환경에 맞춘 맞춤형 리스크 관리 체계 설계</dd>
-                                <dd>
-                                    · 안전·보건 컨설팅은 단순한 규제 대응을 넘어, 기업 및 기관의 인력 운영 효율화,
-                                    ESG(Environmental, Social, Governance) 기준에 부합하는 조직 진단 컨설팅 진행 
-                                </dd>
-                            </dl>
-                        </div>
-                        <h3>주요 기능</h3>
-                        <div class="function_wrap">
-                            <div class="functionLeft">
-                                <div class="about content">
-                                    <dl>
-                                        <dt><img src="./img/number02.png" alt="img">경영자 리더십</dt>
-                                        <dd>· 안전보건목표 및 경영방침</dd>
-                                        <dd>· 안전 및 보건에 관한 전담조직</dd>
-                                        <dd>· 안전 및 보건에 관한 예산편성 및 집행지침</dd>
-                                    </dl>
-                                </div>
-                                <div class="about content">
-                                    <dl>
-                                        <dt><img src="./img/number03.png" alt="img">근로자의 참여</dt>
-                                        <dd>· 안전보건관리 전반에 관한 정보를 공개</dd>
-                                        <dd>· 구성원이 참여할 수 있는 절차</dd>
-                                    </dl>
-                                </div>
-                                <div class="about content">
-                                    <dl>
-                                        <dt><img src="./img/number04.png" alt="img">위험요인 파악</dt>
-                                        <dd>· 산업재해, 아차사고 조사</dd>
-                                        <dd>· 위험기계·기구·설비 등을 파악</dd>
-                                        <dd>· 유해인자 파악</dd>
-                                        <dd>· 위험장소 및 작업형태별 위험요인을 파악</dd>
-                                    </dl>
-                                </div>
-                                <div class="about content">
-                                    <dl>
-                                        <dt><img src="./img/number05.png" alt="img">위험요인 제거·대체 및 통제</dt>
-                                        <dd>· 안전작업허가제 운영</dd>
-                                        <dd>· 위험요인을 제거하기 위한 검토·개선을 실시</dd>
-                                        <dd>· 안전보건교육 실시 및 비일상작업 안전절차를 마련</dd>
-                                        <dd>· 위험요인 개선사항 점검·조치</dd>
-                                    </dl>
-                                </div>
+                    <div class="inputGroup">
+                        <div class="inputText">
+                            <div class="must"><p>비밀번호</p><span>입력해주세요!</span></div>
+                            <div class="inputArea">
+                                <input type="password" placeholder="비밀번호를 입력해 주세요." required name="PW" id="PW">
                             </div>
-                            <div class="functionRight">
-                                <div class="about content">
-                                    <dl>
-                                        <dt><img src="./img/number06.png" alt="img">비상조치계획 수립</dt>
-                                        <dd>· 위험요인을 바탕으로 ‘시나리오’ 작성</dd>
-                                        <dd>· ‘재해 발생 시나리오’ 별 조치계획 수립</dd>
-                                        <dd>· 조치계획에 따라 주기적으로 훈련</dd>
-                                    </dl>
-                                </div>
-                                <div class="about content">
-                                    <dl>
-                                        <dt><img src="./img/number07.png" alt="img">도급·용역·위탁 시 안전보건 확보</dt>
-                                        <dd>· 산업재해 예방 능력을 갖춘 사업주를 선정</dd>
-                                        <dd>· 안전보건관리체계 구축·운영 시 사업장 내 모든 구성원보호</dd>
-                                    </dl>
-                                </div>
-                                <div class="about content">
-                                    <dl>
-                                        <dt><img src="./img/number08.png" alt="img">평가 및 개선</dt>
-                                        <dd>· 안전보건 목표를 설정하고 관리</dd>
-                                        <dd>· 발굴된 문제점을 주기적으로 검토</dd>
-                                    </dl>
-                                </div>
-                                <div class="aboutImg content">
-                                    <img src="./img/aboutImg.png" alt="img">
-                                </div>
+                        </div>
+                        <div class="inputText">
+                            <div class="must"><p>비밀번호 확인</p><span>입력해주세요!</span></div>
+                            <div class="inputArea">
+                                <input type="password" placeholder="비밀번호를 입력해 주세요." required name="PW2" id="PW2">
+                                <p class="caption">*비밀번호는 8~20자 이내의 영문, 숫자, 특수문자 필수 조합</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inputGroup">
+                        <div class="inputText">
+                            <div class="must"><p>담당자 이름</p><span>입력해주세요!</span></div>
+                            <div class="inputArea">
+                                <input type="text" placeholder="담당자 이름을 입력해 주세요." required name="manager" id="manager">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inputGroup">
+                        <div class="inputText">
+                            <div class="must"><p>담당자 연락처</p><span>입력해주세요!</span></div>
+                            <div class="inputArea">
+                                <input type="text" placeholder="휴대폰 번호를 입력해 주세요. (010-0000-0000)" required oninput="regiTel(this)" maxlength="11" name="PN" id="PN">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inputGroup">
+                        <div class="inputText">
+                            <div class="must"><p>사업자명</p><span>입력해주세요!</span></div>
+                            <div class="inputArea">
+                                <input type="text" placeholder="소속 부서를 입력해 주세요." required name="BM" id="BM">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inputGroup">
+                        <div class="inputText">
+                            <div class="must"><p>대표자명</p><span>입력해주세요!</span></div>
+                            <div class="inputArea">
+                                <input type="text" placeholder="대표자명을 입력해 주세요." required name="agentA" id="agentA">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inputGroup">
+                        <div class="inputText">
+                            <div class="must"><p>사업자등록번호</p><span>입력해주세요!</span></div>
+                            <div class="inputArea">
+                                <input type="text" placeholder="-없이 입력" oninput="businessTel(this)" maxlength="11" required name="AM" id="AM">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inputGroup">
+                        <div class="inputText">
+                            <div class="must"><p>사업장 주소</p><span>입력해주세요!</span></div>
+<div class="inputArea" style="flex-wrap: wrap;">
+    <input type="text" id="postcode" placeholder="우편번호" readonly name="postcode">
+    <button type="button" class="btn_gray" onclick="execDaumPostcode()">주소 검색</button>
+    <input type="text" id="address" placeholder="기본 주소" readonly name="address">
+    <input type="text" id="detailAddress" placeholder="상세 주소를 입력해 주세요.">
+</div>
+
+                        </div>
+                    </div>
+                    <div class="inputGroup">
+                        <div class="inputText">
+                            <div class="must"><p>사업자 등록증</p><span>입력해주세요!</span></div>
+                            <div class="inputArea">
+                                <input type="text" required>
+                                <!-- <button type="button" class="btn_gray">파일 첨부</button> -->
+                                 <label for="fileUpload" class="btn_gray file_btn">파일 첨부</label>
+                                 <input type="file" id="fileUpload" class="file-input" multiple>
+                                <p class="caption">파일형식: pdf, jpg</p>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        document.getElementById('fileUpload').addEventListener('change', function() {
+                            var fileNames = Array.from(this.files).map(file => file.name).join(', ');
+                            this.closest('.inputArea').querySelector('input[type="text"]').value = fileNames;
+                        });
+                    </script>
+                    <div class="inputGroup">
+                        <div class="inputText">
+                            <div class="must"><p>사용 솔루션 (중복 선택 가능)</p><span>입력해주세요!</span></div>
+                            <div class="inputArea">
+                                <label>
+                                    <input type="checkbox">
+                                    Safe- ON
+                                </label>
+                                <label>
+                                    <input type="checkbox">
+                                    Green-Matrix
+                                </label>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- <div class="btn_wrap">
-                    <button type="button" onclick="location.href=('#none')" class="main">데모 신청</button>
-                </div> -->
+                <div class="btn_wrap">
+                    <button type="button" class="next">회원가입</button>
+                    <button type="button" class="end" onclick="togglePopup('cancelPopup')">취소</button>
+                </div>
             </div>
         </div>
         <!-- <div id="include-footer"></div> -->
@@ -360,5 +348,41 @@
     </div><!--  class="wrap" -->
 </body>
 
+
+  <!-- 카카오 주소 검색 스크립트 -->
+  <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+  <script>
+    function execDaumPostcode() {
+        new daum.Postcode({
+            oncomplete: function(data) {
+            var addr = ''; // 최종 주소
+            var extra = '';
+
+            if (data.userSelectedType === 'R') {
+                addr = data.roadAddress;
+            } else {
+                addr = data.jibunAddress;
+            }
+
+            if (data.userSelectedType === 'R') {
+                if (data.bname !== '') extra += data.bname;
+                if (data.buildingName !== '') extra += (extra ? ', ' + data.buildingName : data.buildingName);
+                if (extra !== '') addr += ' (' + extra + ')';
+            }
+
+            console.log(data);
+
+            document.getElementById('postcode').value = data.zonecode;
+            document.getElementById('address').value = addr;
+            document.getElementById('detailAddress').focus();
+            }
+        }).open();
+    }
+
+
+</script>
+
 <script type="text/javascript" src="./js/script.js"></script>
+
+
 </html>

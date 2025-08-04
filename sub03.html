@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KMAC Digital Solution</title>
+    <script  src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+    <!-- swiper 슬라이드 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="modal" id="siteMap">
+        <div class="bg" onclick="closePopup('siteMap')"></div>
+        <div class="modal_cont">
+            <div class="modalTop">
+                <p>사이트맵</p>
+                <button type="button" class="close" onclick="closePopup('siteMap')"><i class="mdi mdi-close"></i></button>
+            </div>
+            <div class="modalCont">
+                <p>서비스</p>
+                <ul>
+                    <li>
+                        <a href="sub01.html">Safe- On</a>
+                    </li>
+                    <li>
+                        <a href="sub02.html">Green-Matrix</a>
+                    </li>
+                    <li>
+                        <a href="sub03.html">K-DQMS</a>
+                    </li>
+                    <li>
+                        <a href="sub04.html">AI Studio</a>
+                    </li>
+                </ul>
+                <p>인사이트</p>
+                <ul>
+                    <li>
+                        <a href="sub05.html">KMAC News</a>
+                    </li>
+                    <li>
+                        <a href="sub06.html">KMAC BIZ & Insight</a>
+                    </li>
+                    <li>
+                        <a href="sub07.html">KMAC TV</a>
+                    </li>
+                    <li>
+                        <a href="sub08.html">Conference</a>
+                    </li>
+                </ul>
+                <p>고객지원</p>
+                <ul>
+                    <li>
+                        <a href="help.html#tabCont1">1:1 문의하기</a>
+                    </li>
+                    <li>
+                        <a href="help.html#tabCont2">데모 시연 신청</a>
+                    </li>
+                </ul>
+                <p>회사소개</p>
+                <ul>
+                    <li>
+                        <a href="https://kmac.co.kr/portal/index#main">회사소개</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <!-- <div id="include-headerSub"></div> -->
+        <div class="gnb sub">
+            <div class="top_logo logo">
+                <a href="./main.html">
+                    <img src="./img/mainLogo.png" alt="img">
+                </a>
+            </div>
+            <nav>
+                <div class="line"></div>
+                <ul>
+                    <li>
+                        <a style="cursor:pointer;">서비스</a>
+                        <ul class="twoD" style="display: none;">
+                            <li>
+                                <a href="sub01.html">Safe- On</a>
+                            </li>
+                            <li>
+                                <a href="sub02.html">Green-Matrix</a>
+                            </li>
+                            <li>
+                                <a href="sub03.html">K-DQMS</a>
+                            </li>
+                            <li>
+                                <a href="sub04.html">AI Studio</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a style="cursor:pointer;">인사이트</a>
+                        <ul class="twoD" style="display: none;">
+                            <li>
+                                <a href="sub05.html">KMAC News</a>
+                            </li>
+                            <li>
+                                <a href="sub06.html">KMAC BIZ & Insight</a>
+                            </li>
+                            <li>
+                                <a href="sub07.html">KMAC TV</a>
+                            </li>
+                            <li>
+                                <a href="sub08.html">Conference</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a style="cursor:pointer;">고객지원</a>
+                        <ul class="twoD" style="display: none;">
+                            <li>
+                                <a href="help.html#tabCont1">1:1 문의하기</a>
+                            </li>
+                            <li>
+                                <a href="help.html#tabCont2">데모 시연 신청</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a style="cursor:pointer;">회사소개</a>
+                        <ul class="twoD" style="display: none;">
+                            <li>
+                                <a href="https://kmac.co.kr/portal/index#main">회사소개</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="top_right">
+                <ul> 
+                    <li>
+                        <a href="help.html#tabCont1">문의하기</a>
+                    </li>
+                    <li>
+                        <a href="login.html">로그인</a>
+                    </li>
+                    <li>
+                        <a href="join01.html">회원가입</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mob_menu">
+                <button type="button" class="hamber">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </button>
+            </div>
+        </div> <!-- //gnb -->
+        <div class="content_wrap detailPage" id="subPage">
+            <div class="detailTop">
+                <span class="location">Home / 서비스 / KMAC DQMS</span>
+                <div class="detailTit">
+                    <h2>KMAC DQMS</h2>
+                </div>
+                <div class="justify">
+                    <p>
+                        K-DQMS는 공공 및 민간기업 데이터 품질관리 컨설팅 노하우를 바탕으로<br/>
+                        데이터 자동수집부터 자동화 기반의 품질진단과 품질개선활동까지 가능한 All-In-One 데이터 품질관리 솔루션입니다.
+                    </p>
+                    <div class="btn_wrap">
+                        <button type="button" class="main">데모신청</button>
+                        <button type="button" class="orange">브로슈어 다운로드</button>
+                    </div>
+                </div>
+                <div class="line"></div>
+            </div>
+            <div class="detailCont">
+                <div class="section content">
+                    <div class="mainTit">
+                        <h2>
+                            AI/빅데이터 시대,<br/>
+                            경쟁력은 ‘데이터 품질’에서 시작됩니다.
+                        </h2>
+                        <h3>
+                            K-DQMS를 통해 데이터의 신뢰성과 정확성을 확보하세요!
+                        </h3>
+                    </div>
+                </div>
+                <div class="section content">
+                    <div class="sectionCont">
+                        <div class="group_wrap double">
+                            <div class="group content">
+                                <h2>비용효용성과 생산성</h2>
+                                <div class="box">
+                                    <h2>불필요한 운영 비용</h2>
+                                    <dl>
+                                        <dd>· 오류·중복 데이터로 인해 재작업, 클렌징 등 불필요한 비용이과도하게 발생</dd>
+                                        <dd>· 잘못된 정보 기반으로 한 의사결정으로 업무 효율 저하 및추가 비용지출</dd>
+                                        <dd>· 빅데이터 환경에서는 데이터의 양이 기하급수적으로 증가하기때문에 오류와 중복 문제도 훨씬 복잡</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="group content">
+                                <h2>AI 모델 성능향상의 어려움</h2>
+                                <div class="box">
+                                    <h2><span>GIGO</span> Garbage In, Garbage Out</h2>
+                                    <dl>
+                                        <dd>· AI 모델은 학습데이터의 질에 의해 성능이 결정되므로, 정확성 일관성이 떨어지면 모델 결과가 왜곡될 가능성이 높음</dd>
+                                        <dd>· 성능 저하 → 재학습 · 재개발 비용 급증, AI 프로젝트 성공률 저하로 이어짐</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="group content">
+                                <h2>행정 비효율</h2>
+                                <div class="box">
+                                    <h2>의사결정 자료의 부정확성</h2>
+                                    <dl>
+                                        <dd>· 공공 · 기업 등의 행정 데이터 품질이 낮으면, 시스템 간 상호 참조가 제대로 이루어지지 않아 결재 지연, 의사결정 오류 발생</dd>
+                                        <dd>· 부서 · 기관마다 다른 기준으로 데이터를 관리하는 경우 데이터 충돌이 빈번하게 발생하여 연계 · 통합이 어려움</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="group content">
+                                <h2>AI와 결합할 수 있는 데이터 부재</h2>
+                                <div class="box">
+                                    <h2>활용 가능 데이터의 부재</h2>
+                                    <dl>
+                                        <dd>
+                                            · 데이터 정합성 · 표준화 등이 미비하여 대용량 · 다양한 데이터 소스를 연결하여 AI를 활용하기 어려움
+                                        </dd>
+                                        <dd>· 정형, 반정형, 비정형 데이터 등을 다룰 때도 품질 기준과 거버넌스 체계가 갖춰져야 AI에 활용 가능</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section content">
+                    <div class="sectionTit">
+                        <h3>Key Issue Finding</h3>
+                    </div>
+                    <div class="sectionCont">
+                        <div class="about content key">
+                            <dl>
+                                <dt>거버넌스 도입</dt>
+                                <dd>데이터 품질관리의 정책 · 역할 · 절차를 확립하여 운영 효율과 리스크 관리 필요</dd>
+                            </dl>
+                        </div>
+                        <div class="about content key">
+                            <dl>
+                                <dt>데이터 표준화</dt>
+                                <dd>중복 포맷 · 코드체계, 분산된 관리 기준이 통일되어야 함</dd>
+                            </dl>
+                        </div>
+                        <div class="about content key">
+                            <dl>
+                                <dt>고품질 데이터 확보</dt>
+                                <dd>지속적인 프로파일링 · 품질 모니터링을 통한 고품질 데이터 확보 필요</dd>
+                            </dl>
+                        </div>
+                        <div class="about content key">
+                            <dl>
+                                <dt>AI 모델 성능 개선</dt>
+                                <dd>데이터 품질관리를 통해 클린 데이터를 확보하여 AI 모델 성능 개선 필요</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <div class="section content">
+                    <div class="sectionTit">
+                        <h3>What Is K-DQMS?</h3>
+                        <p>정보시스템의 값진단, BR(업무규칙)진단, 표준진단, 구조진단 등을 수행하여 데이터 품질현황을 분석하고<br/>
+                            전문 컨설팅을 통해 진단결과에 대한 원인분석 및 개선방향을 제시해주는</p>
+                        <h2>All-In-One Data Quality Management 솔루션</h2>
+                    </div>
+                    <div class="sectionCont">
+                        <div class="about content blue">
+                            <h3>다양한 DB 및 표준사전 지원</h3>
+                            <p>
+                                · 알티베이스, 큐브리드, 오라클, MariaDB, MySQL, PostgreSQL 등 11개 DB 지원<br/>
+                                · NIA, 행안부의 표준사전 지원 등
+                            </p>
+                        </div>
+                        <div class="about content blue">
+                            <h3>데이터 자동 수집 기능 및 데이터 자동 생성 기능 제공</h3>
+                            <p>
+                                · 도메인 자동분류 , 값 진단 규칙 및 BR 진단 규칙 자동입력<br/>
+                                · 샘플데이터 및 오류데이터 자동 수집 지원 등
+                            </p>
+                        </div>
+                        <div class="about content blue">
+                            <h3>데이터 품질관리 전문 컨설팅 기반 맞춤형 솔루션 제공</h3>
+                            <p>
+                                · 공공 및 민간기업 데이터 품질관리 컨설팅 노하우를 바탕으로 맞춤형 K-DQMS 솔루션 제공
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section content">
+                    <div class="sectionTit">
+                        <h3>K-DQMS 솔루션의 주요 기능</h3>
+                    </div>
+                    <div class="sectionCont">
+                        <div class="group_wrap double solution">
+                            <div class="group content">
+                                <div class="box">
+                                    <div>
+                                        <h3>값 진단%</h3>
+                                        <dl>
+                                            <dd>· 날짜, 여부, 수량 등 범정부 진단 기준에 맞는 도메인 선정</dd>
+                                            <dd>· 진단기준에 따른 진단규칙 생성 (코드진단 지원)</dd>
+                                            <dd>· 검증규칙에 맞게 진단수행 후 오류율 산출</dd>
+                                        </dl>
+                                    </div>
+                                    <img src="./img/solution01.png" alt="">
+                                </div>
+                            </div>
+                            <div class="group content">
+                                <div class="box">
+                                    <div>
+                                        <h3>표준 진단</h3>
+                                        <dl>
+                                            <dd>· 현행 DB의 컬럼명의 표준용어 적용률 진단</dd>
+                                            <dd>· 표준용어에 따른 표준도메인 적용률 진단</dd>
+                                            <dd>· 표준적용률을 산출하여 표준수준 진단</dd>
+                                        </dl>
+                                    </div>
+                                    <img src="./img/solution02.png" alt="">
+                                </div>
+                            </div>
+                            <div class="group content">
+                                <div class="box">
+                                    <div>
+                                        <h3>업무규칙 진단</h3>
+                                        <dl>
+                                            <dd>· 선후, 수식, 동등, 논리관계 등 기준에 맞는 업무규칙 선정</dd>
+                                            <dd>· 날짜, 시간, 금액 등 업무규칙 자동생성</dd>
+                                            <dd>· 업무규칙에 맞게 진단수행 후 오류율 산출</dd>
+                                        </dl>
+                                    </div>
+                                    <img src="./img/solution03.png" alt="">
+                                </div>
+                            </div>
+                            <div class="group content">
+                                <div class="box">
+                                    <div>
+                                        <h3>구조 진단</h3>
+                                        <dl>
+                                            <dd>· 테이블정의서와 현행 DB의 교차검증비교</dd>
+                                            <dd>· 칼럼정의서와 현행 DB의 교차검증비교</dd>
+                                            <dd>· 적용률을 계산하여 가장 낮은 항목이 점수로 산출</dd>
+                                        </dl>
+                                    </div>
+                                    <img src="./img/solution04.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section content">
+                    <div class="sectionTit">
+                        <h3>K-DQMS 솔루션의 Key Value</h3>
+                    </div>
+                    <div class="sectionCont">
+                        <div class="about key content" style="padding-left: 9.375rem;">
+                            <div class="circle">
+                                <p>
+                                    데이터 거버넌스<br/>
+                                    체계 확립
+                                </p>
+                            </div>
+                            <h3 class="fc_black">중복·충돌을 줄여 데이터를 일관성 있게 관리할 수 있는 거버넌스 확립</h3>
+                            <p>
+                                <span>· 데이터 정책 및 기준 통일로 중복 투자 및 운영 혼선 최소화</span><br/>
+                                · 법 · 규제 준수(개인정보보호, 내부 감사 등)로 준법경영 체계 마련<br/>
+                                · 소유와 책임(R&R) 명확화를 통해 내 · 외부 협업과 투명성 증대
+                            </p>
+                        </div>
+                        <div class="about key content" style="padding-left: 9.375rem;">
+                            <div class="circle">
+                                <p>
+                                    데이터 신뢰도 및<br/>
+                                    활용도 향상
+                                </p>
+                            </div>
+                            <h3 class="fc_black">데이터 신뢰도 확보를 통한 활용도 향상</h3>
+                            <p>
+                                · 오류 · 중복 등의 데이터 사전 제거로 데이터 분석 정확도 상승
+                                <span>· 메타데이터 관리 강화로 필요 정보의 신속한 검색 및 활용 가능</span>
+                                · 통합된 데이터 품질관리 뷰 제공으로 데이터 신뢰도 및 활용도 확보
+                            </p>
+                        </div>
+                        <div class="about key content" style="padding-left: 9.375rem;">
+                            <div class="circle">
+                                <p>
+                                    AI/분석 모델<br/>
+                                    성능 극대화
+                                </p>
+                            </div>
+                            <h3 class="fc_black">고품질 데이터를 활용한 AI 모델 성능 강화</h3>
+                            <p>
+                                · 오류·중복등의 데이터가 최소화된 고품질 데이터를 학습 데이터로 활용하여 모델 성능 향상<br/>
+                                <span>· 프로파일링 · 데이터 정제 프로세스 마련으로 고품질 데이터 확보를 통한 AI 모델 성능 극대화 기여</span>
+                            </p>
+                        </div>
+                        <div class="about key content" style="padding-left: 9.375rem;">
+                            <div class="circle">
+                                <p>
+                                    의사결정 정확도<br/>
+                                    · 속도 향상
+                                </p>
+                            </div>
+                            <h3 class="fc_black">고품질 데이터 기반 의사결정 정확도 및 속도 향상</h3>
+                            <p>
+                                · 분석결과의 신뢰성 확보로 의사결정 지연 · 실수 감소<br/>
+                                · 실시간 데이터 품질관리를 통해 필요한 정보의 정확성 확보<br/>
+                                <span>· 분산된 데이터의 품질관리로 협업 시 데이터 확인 절차 단축</span>
+                            </p>
+                        </div>
+                        <div class="about key content" style="padding-left: 9.375rem;">
+                            <div class="circle">
+                                <p>
+                                    비용 효율 및<br/>
+                                    운영 생산성 제고
+                                </p>
+                            </div>
+                            <h3 class="fc_black">데이터 오류와 중복, 반복작업을 줄여 운영 비용 절감</h3>
+                            <p>
+                                · 중복 · 오류 데이터 최소화로 재작업 비용 및 시간 절감<br/>
+                                <span>· 데이터 품질관리의 단순 작업을 줄여 핵심 인력이 전략적 업무에 집중할 수 있는 환경 조성</span><br/>
+                                · 운영 전반에서 프로세스 효율 향상, 조직 생산성 향상
+                            </p>
+                        </div>
+                        <div class="about key content" style="padding-left: 9.375rem;">
+                            <div class="circle">
+                                <p>
+                                    데이터 연계 · <br/>
+                                    활용 기반 신규<br/>
+                                    산업 발굴
+                                </p>
+                            </div>
+                            <h3 class="fc_black">새로운 비즈니스 모델과 산업 성장 기회 발굴</h3>
+                            <p>
+                                <span>· 데이터 공유 · 거래 생태계 활성화로 신규 비즈니스 모델 발굴과 산업 성장 기회 발굴</span><br/>
+                                · 빅데이터 · AI 기술 기반 미래지향적 신산업 발굴 · 육성 기회 마련<br/>
+                                · 외부 데이터 연계 등 다양한 소스 연계로 신규 서비스 창출
+                            </p>                            
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="btn_wrap">
+                    <button type="button" onclick="location.href=('#none')" class="main">데모 신청</button>
+                </div> -->
+            </div>
+        </div>
+        <!-- <div id="include-footer"></div> -->
+        <div class="footer">
+            <div class="footerCont">
+                <img src="./img/white_logo.png" alt="img">
+                <div class="footerTop">
+                    <div class="footerText">
+                        <h3>한국능률협회컨설팅</h3>
+                        <p>
+                            사업자등록번호 : 116-81-29581 | 통신판매자 신고번호 : 제 2008-서울영등포구-0368호<br/>
+                            직업정보제공사업자 : 서울남부지청 신고번호 J1204020220001 | TEL. 02. 3786. 0114 | 대표이사 사장 한수희
+                        </p>
+                    </div>
+                    <div class="footerText">
+                        <h3>한국능률협회컨설팅</h3>
+                        <div class="footerLink">
+                            <ul>
+                                <li><a href="#none" target="_blank">한국능률협회</a></li>
+                                <li><a href="#none" target="_blank">KMA미디어</a></li>
+                                <li><a href="#none" target="_blank">KMA리서치</a></li>
+                                <li><a href="#none" target="_blank">KMA플러스</a></li>
+                                <li><a href="#none" target="_blank">KMA희남재단</a></li>
+                                <li><a href="#none" target="_blank">CE</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footerText">
+                        <h3>Contact</h3>
+                        <p>(07241) 서울특별시 영등포구 여의공원로 101 (여의도동, C.C.M.M빌딩), 8층</p>
+                    </div>
+                </div>
+                <div class="footerBottom">
+                    <ul class="footer-bottom-nav">
+                        <li><a href="https://kmac.co.kr/portal/index#util_contact">오시는 길</a></li>
+                        <li><a href="#none" onclick="togglePopup('siteMap')">사이트맵</a></li>
+                        <li><a href="help.html#tabCont1">문의하기</a></li>
+                        <li><a href="https://kmac.co.kr/portal/index#util_terms">이용약관</a></li>
+                        <li class="on"><a href="https://kmac.co.kr/portal/index#util_privacy" class="bold">개인정보처리방침</a></li>
+                    </ul>
+                    <span>ⓒ 2025 KMAC. All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+    </div><!--  class="wrap" -->
+</body>
+
+<script type="text/javascript" src="./js/script.js"></script>
+</html>
