@@ -132,7 +132,7 @@ const UP_OFFSET = 50;
 
 degitalSections.forEach((section) => {
   if (window.innerWidth <= 799) return;
-  
+
   const track = section.querySelector('.horizontal-track');
   const boxes = section.querySelectorAll('.offeringBox');
   const rightBtn = section.querySelector('.rightBtn .right');
@@ -285,83 +285,88 @@ function closeAgreeModal(id) {
 
 
 /* 회원가입 */
-document.querySelector('.next').addEventListener('click', function (e) {
-  const inputGroups = document.querySelectorAll('.inputGroup');
-  let isValid = true;
-  let passwordValue = '';
+document.addEventListener('DOMContentLoaded', function () {
+  const nextBtn = document.querySelector('.next');
+  if (!nextBtn) return;
 
-  inputGroups.forEach(group => {
-    const inputTexts = group.querySelectorAll('.inputText');
+  nextBtn.addEventListener('click', function (e) {
+    const inputGroups = document.querySelectorAll('.inputGroup');
+    let isValid = true;
+    let passwordValue = '';
 
-    inputTexts.forEach(inputText => {
-      const must = inputText.querySelector('.must span');
-      const inputs = inputText.querySelectorAll('input[type="text"], input[type="password"]');
+    inputGroups.forEach(group => {
+      const inputTexts = group.querySelectorAll('.inputText');
 
-      // 체크박스 그룹 검사
-      const checkboxes = inputText.querySelectorAll('input[type="checkbox"]');
-      if (checkboxes.length > 0) {
-        const isAnyChecked = Array.from(checkboxes).some(cb => cb.checked);
-        if (!isAnyChecked) {
+      inputTexts.forEach(inputText => {
+        const must = inputText.querySelector('.must span');
+        const inputs = inputText.querySelectorAll('input[type="text"], input[type="password"]');
+
+        // 체크박스 그룹 검사
+        const checkboxes = inputText.querySelectorAll('input[type="checkbox"]');
+        if (checkboxes.length > 0) {
+          const isAnyChecked = Array.from(checkboxes).some(cb => cb.checked);
+          if (!isAnyChecked) {
+            must.style.display = 'inline';
+            isValid = false;
+          } else {
+            must.style.display = 'none';
+          }
+          return;
+        }
+
+        // 일반 입력 검사
+        let hasValue = true;
+        inputs.forEach(input => {
+          if (!input.value.trim()) {
+            hasValue = false;
+          }
+        });
+
+        if (!hasValue) {
           must.style.display = 'inline';
           isValid = false;
+          return;
         } else {
           must.style.display = 'none';
         }
-        return;
-      }
 
-      // 일반 입력 검사
-      let hasValue = true;
-      inputs.forEach(input => {
-        if (!input.value.trim()) {
-          hasValue = false;
+        // 비밀번호 유효성 검사
+        const labelText = inputText.querySelector('.must p').textContent;
+        const input = inputs[0];
+
+        if (labelText.includes('비밀번호') && !labelText.includes('확인')) {
+          passwordValue = input.value;
+          const pw = input.value;
+          const pwValid = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]).{8,20}$/;
+
+          if (!pwValid.test(pw)) {
+            must.textContent = '비밀번호 조건을 확인해 주세요!';
+            must.style.display = 'inline';
+            isValid = false;
+          } else {
+            must.textContent = '입력해주세요!';
+            must.style.display = 'none';
+          }
+        }
+
+        // 비밀번호 확인 검사
+        if (labelText.includes('비밀번호 확인')) {
+          if (input.value !== passwordValue) {
+            must.textContent = '비밀번호가 일치하지 않습니다!';
+            must.style.display = 'inline';
+            isValid = false;
+          } else {
+            must.textContent = '입력해주세요!';
+            must.style.display = 'none';
+          }
         }
       });
-
-      if (!hasValue) {
-        must.style.display = 'inline';
-        isValid = false;
-        return;
-      } else {
-        must.style.display = 'none';
-      }
-
-      // 비밀번호 유효성 검사
-      const labelText = inputText.querySelector('.must p').textContent;
-      const input = inputs[0];
-
-      if (labelText.includes('비밀번호') && !labelText.includes('확인')) {
-        passwordValue = input.value;
-        const pw = input.value;
-        const pwValid = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]).{8,20}$/;
-
-        if (!pwValid.test(pw)) {
-          must.textContent = '비밀번호 조건을 확인해 주세요!';
-          must.style.display = 'inline';
-          isValid = false;
-        } else {
-          must.textContent = '입력해주세요!';
-          must.style.display = 'none';
-        }
-      }
-
-      // 비밀번호 확인 검사
-      if (labelText.includes('비밀번호 확인')) {
-        if (input.value !== passwordValue) {
-          must.textContent = '비밀번호가 일치하지 않습니다!';
-          must.style.display = 'inline';
-          isValid = false;
-        } else {
-          must.textContent = '입력해주세요!';
-          must.style.display = 'none';
-        }
-      }
     });
-  });
 
-  if (isValid) {
-    location.href = 'join03.html';
-  }
+    if (isValid) {
+      location.href = 'join03.html';
+    }
+  });
 });
 
 
@@ -394,40 +399,40 @@ function closePopup(popupId) {
 }
 
 
-/* 탭메뉴 */
-
 document.addEventListener("DOMContentLoaded", function () {
-  // 탭 콘텐츠와 버튼을 전역으로 수집
   const tabConts = document.querySelectorAll(".content_wrap > div[id^='tab']");
   const allTabBtns = document.querySelectorAll(".tabBtn button");
 
   allTabBtns.forEach(btn => {
     btn.addEventListener("click", function () {
-      const tabName = this.innerText.trim(); // 버튼 텍스트로 구분 (아이디 찾기 / 비밀번호 찾기)
+      const tabName = this.innerText.trim();
 
-      // 버튼 상태 초기화
       allTabBtns.forEach(b => b.classList.remove("active"));
-
-      // 콘텐츠 전부 숨기기
       tabConts.forEach(cont => cont.style.display = "none");
 
-      // 해당 탭과 버튼만 다시 표시
       if (tabName === "아이디 찾기") {
-        document.getElementById("tab1").style.display = "block";
-        document.querySelectorAll(".tabBtn button")[0].classList.add("active");
-        document.querySelectorAll(".tabBtn button")[2].classList.add("active"); // 아래쪽 버튼도
+        const tab1 = document.getElementById("tab1");
+        if (tab1) tab1.style.display = "block";
+
+        document.querySelectorAll(".tabBtn button")[0]?.classList.add("active");
+        document.querySelectorAll(".tabBtn button")[2]?.classList.add("active");
       } else if (tabName === "비밀번호 찾기") {
-        document.getElementById("tab2").style.display = "block";
-        document.querySelectorAll(".tabBtn button")[1].classList.add("active");
-        document.querySelectorAll(".tabBtn button")[3].classList.add("active"); // 아래쪽 버튼도
+        const tab2 = document.getElementById("tab2");
+        if (tab2) tab2.style.display = "block";
+
+        document.querySelectorAll(".tabBtn button")[1]?.classList.add("active");
+        document.querySelectorAll(".tabBtn button")[3]?.classList.add("active");
       }
     });
   });
 
-  // 초기 상태: tab1만 표시
-  document.getElementById("tab1").style.display = "block";
-  document.getElementById("tab2").style.display = "none";
+  const tab1 = document.getElementById("tab1");
+  const tab2 = document.getElementById("tab2");
+
+  if (tab1) tab1.style.display = "block";
+  if (tab2) tab2.style.display = "none";
 });
+
 
 
 const regiTel = (target) => {
@@ -443,40 +448,43 @@ const businessTel = (target) => {
 
 
 // 페이지 로드 시 URL 해시를 읽고 해당 탭을 엽니다.
-document.addEventListener('DOMContentLoaded', function() {
-    var hash = window.location.hash.substring(1);
-    if (hash) {
-        openTab(null, hash);
-        var tabLink = document.querySelector('.tab-btn[onclick="openTab(event, \'' + hash + '\')"]');
-        if (tabLink) {
-            tabLink.classList.add('active');
-        }
-    } else {
-        // 해시가 없으면 첫 번째 탭을 엽니다.
-        openTab(null, 'tabCont1_1');
-        document.querySelector('.tab-btn').classList.add('active');
+document.addEventListener('DOMContentLoaded', function () {
+  const hash = window.location.hash.substring(1);
+
+  if (hash) {
+    openTab(null, hash);
+    const tabLink = document.querySelector('.tab-btn[onclick="openTab(event, \'' + hash + '\')"]');
+    if (tabLink) {
+      tabLink.classList.add('active');
     }
-    
+  } else {
+    openTab(null, 'tabCont1_1');
+    const firstTabBtn = document.querySelector('.tab-btn');
+    if (firstTabBtn) {
+      firstTabBtn.classList.add('active');
+    }
+  }
 });
 
+
 function openTab(event, tabName) {
-    // 모든 탭 콘텐츠를 숨깁니다.
-    var tabContents = document.querySelectorAll('.tab_detail');
-    tabContents.forEach(function(tabContent) {
-        tabContent.classList.remove('active');
-    });
+  // 모든 탭 콘텐츠를 숨깁니다.
+  const tabContents = document.querySelectorAll('.tab_detail');
+  tabContents.forEach(tabContent => tabContent.classList.remove('active'));
 
-    // 모든 탭 링크에서 active 클래스를 제거합니다.
-    var tabLinks = document.querySelectorAll('.tab-btn');
-    tabLinks.forEach(function(tabLink) {
-        tabLink.classList.remove('active');
-    });
+  // 모든 탭 링크에서 active 클래스를 제거합니다.
+  const tabLinks = document.querySelectorAll('.tab-btn');
+  tabLinks.forEach(tabLink => tabLink.classList.remove('active'));
 
-    // 선택한 탭 콘텐츠를 표시하고, 해당 탭 링크에 active 클래스를 추가합니다.
-    document.getElementById(tabName).classList.add('active');
-    if (event) {
-        event.currentTarget.classList.add('active');
-        showWriteContent(1);
-        taking(1);
-    }
+  // 선택한 탭 콘텐츠를 표시하고, 해당 탭 링크에 active 클래스를 추가합니다.
+  const tabEl = document.getElementById(tabName);
+  if (tabEl) {
+    tabEl.classList.add('active');
+  }
+
+  if (event) {
+    event.currentTarget.classList.add('active');
+    // showWriteContent(1);
+    // taking(1);
+  }
 }
