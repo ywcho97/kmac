@@ -251,6 +251,7 @@ button.join{font-size: 1.625rem;}
 
 /* 회원가입 02, 문의 */
 .inputGroup .inputText {display: inline-block; margin-bottom: 20px; margin-right: 10px;}
+.sub_wrap .join_wrap{display: grid; justify-content: center;}/* 회원가입 */
 .sub_wrap .inputText_wrap .inputText p{font-size: 18px; font-weight: 600; color: var(--black);}
 .sub_wrap .inputText_wrap .inputText .must{display: flex; align-items: center; gap: 5px;}
 .sub_wrap .inputText_wrap .inputText .must p::after{content: '*'; color: var(--orange);}
