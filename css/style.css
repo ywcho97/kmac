@@ -71,7 +71,7 @@ button {cursor: pointer; background: rgba(0, 0, 0, 0);}
 
 .bg_gray {background-color: #eee; background-color: #f8f8f8}
 .btn_line {display: inline-block; border: .0625rem solid var(--lightgray); text-align: ceter; width: 15rem; height: 2.5rem; line-height: 2.5rem; border-radius: 2.5rem; font-size: 1rem;}
-input[type="checkbox"]{accent-color: var(--orange);}
+input[type="checkbox"]{accent-color: #FF5C00;} /* 체크 표시 흰색으로 */
 
 button.next{background-color: var(--deepblue); color: #fff; font-size: 1.625rem; }
 button.main{background-color: var(--deepblue); color: #fff; font-size: 1.625rem; }
