@@ -73,12 +73,12 @@ button {cursor: pointer; background: rgba(0, 0, 0, 0);}
 .btn_line {display: inline-block; border: .0625rem solid var(--lightgray); text-align: ceter; width: 15rem; height: 2.5rem; line-height: 2.5rem; border-radius: 2.5rem; font-size: 1rem;}
 input[type="checkbox"]{accent-color: #FF5C00;} /* 체크 표시 흰색으로 */
 
-button.next{background-color: var(--deepblue); color: #fff; font-size: 1.625rem; }
-button.main{background-color: var(--deepblue); color: #fff; font-size: 1.625rem; }
-button.orange{background-color: var(--orange); color: #fff; font-size: 1.625rem; }
-button.end{background-color: #D9D9D9; color: #fff; font-size: 1.625rem; }
-button.line{background-color: transparent; color: var(--deepblue); border: 1px solid var(--deepblue); font-size: 1.625rem; }
-
+button.next{background-color: var(--deepblue); color: #fff; font-size: 1rem; }
+button.main{background-color: var(--deepblue); color: #fff; font-size: 1rem; }
+button.orange{background-color: var(--orange); color: #fff; font-size: 1rem; }
+button.end{background-color: #D9D9D9; color: #fff; font-size: 1rem; }
+button.line{background-color: transparent; color: var(--deepblue); border: 1px solid var(--deepblue); font-size: 1rem; }
+button.join{font-size: 1.625rem;}
 .displayb{display: block !important;}
 .displayn{display: none !important;}
 .displayf{display: flex !important;}
