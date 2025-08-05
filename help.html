@@ -83,6 +83,34 @@
             </div>
         </div>
     </div>
+    <div class="modal" id="tab1Popup">
+        <div class="bg" onclick="closePopup('tab1Popup')"></div>
+        <div class="modal_cont">
+            <div class="modalCont">
+                <p>
+                    문의 접수가 완료되었습니다!<br/>
+                    담당자 확인 후, 빠른 시일 내에 답변 드리겠습니다.
+                </p>
+                <div class="btn_wrap">
+                    <button class="btn btn_main" onclick="closePopup('tab1Popup')">메인으로 돌아가기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="tab2Popup">
+        <div class="bg" onclick="closePopup('tab2Popup')"></div>
+        <div class="modal_cont">
+            <div class="modalCont">
+                <p>
+                    데모 시연 신청이 완료되었습니다!<br/>
+                    담당자 확인 후, 빠른 시일 내에 답변 드리겠습니다.
+                </p>
+                <div class="btn_wrap">
+                    <button class="btn btn_main" onclick="closePopup('tab2Popup')">메인으로 돌아가기</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="wrap">
         <!-- <div id="include-headerSub"></div> -->
         <div class="gnb sub">
@@ -350,7 +378,7 @@
                                 </div>
                             </div>
                             <div class="btn_wrap">
-                                <button type="button" class="main">문의하기</button>
+                                <button type="button" class="main" onclick="togglePopup('tab1Popup')">문의하기</button>
                             </div>
                         </div>
                         <div class="sub_wrap tab_detail" id="tabCont2">
@@ -421,7 +449,7 @@
                                 </div>
                             </div>
                             <div class="btn_wrap">
-                                <button type="button" class="main">신청하기</button>
+                                <button type="button" class="main" onclick="togglePopup('tab2Popup')">신청하기</button>
                             </div>
                         </div>
                     </div>
