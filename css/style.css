@@ -154,7 +154,7 @@ button.join{font-size: 1.625rem;}
 .degitalCont .horizontal-section .horizontal-track .offeringBox:nth-child(4) .bg {background: url(../img/offering04.jpg) center center no-repeat}
 .degitalCont .horizontal-section .horizontal-track .offeringBox .boxHashtag {display: inline-block; min-width: 13.125rem; background-color: var(--lightgray); padding: 1.125rem; margin-bottom: .625rem; border-radius: 3.125rem; text-align: center}
 .degitalCont .horizontal-section .horizontal-track .offeringBox .boxHashtag p {color: var(--black); font-weight: 700;}
-.degitalCont .horizontal-section .horizontal-track .offeringBox .bg {background-size: cover !important; position: absolute; width: 100%; height: calc(100% - 20px); overflow: hidden; border-radius: 1.4375rem;}
+.degitalCont .horizontal-section .horizontal-track .offeringBox .bg {background-size: cover !important; position: absolute; width: 100%; height: calc(100% - 70px); overflow: hidden; border-radius: 1.4375rem;}
 .degitalCont .horizontal-section .horizontal-track .offeringBox .bg .gradient {position: absolute; width: 100%; height: 100%; overflow: hidden; background-color: rgba(0, 32, 105, .8);}
 .degitalCont .horizontal-section .horizontal-track .offeringBox .bg .box_tit {position: absolute; top: 3.125rem; padding: 0 3.4375rem;}
 .degitalCont .horizontal-section .horizontal-track .offeringBox .bg .box_tit h3 {font-size: 3.5rem; color: #fff; font-weight: 700;}
